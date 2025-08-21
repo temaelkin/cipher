@@ -1,10 +1,12 @@
+// Package cipher is for decrypting/encrypting text messages.
 package cipher
 
 import (
 	"strings"
 )
 
-func EncryptCaesar(text string) string {
+// CaeserEncrypt gets a message, then returns encrypted text.
+func CaesarEncrypt(text string) string {
 	message := strings.ToUpper(text)
 	cipherText := ""
 
@@ -20,7 +22,8 @@ func EncryptCaesar(text string) string {
 	return cipherText
 }
 
-func DecryptCaesar(text string) string {
+// CaeserEncrypt gets a ciphered text, then returns decrypted message.
+func CaesarDecrypt(text string) string {
 	cipherText := strings.ToUpper(text)
 	message := ""
 

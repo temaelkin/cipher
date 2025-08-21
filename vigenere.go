@@ -5,8 +5,8 @@ import (
 	"strings"
 )
 
-// CipherVigener returns encrypted text
-func CipherVigenere(text, key string) string {
+// VigenerEncrypt gets a message and a keyword, then returns encrypted text.
+func VigenereEncrypt(text, key string) string {
 	if key == "" {
 		return text
 	}
@@ -34,8 +34,8 @@ func CipherVigenere(text, key string) string {
 	return cipherText
 }
 
-// DecipherVigenere returns decrypted text
-func DecipherVigenere(text, key string) string {
+// VigenerDecrypt gets a ciphered text and a keyword, then returns decrypted message.
+func VigenereDecrypt(text, key string) string {
 	if key == "" {
 		return text
 	}
